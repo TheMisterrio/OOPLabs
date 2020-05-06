@@ -1,0 +1,20 @@
+{% extends 'index.html' %}
+{% block lab %}
+     <div class="card">
+        <div class="card-body">
+            <div class="card-title">List</div>
+            <form action="" method="post">
+                <div class="form-group">
+                    <input type="text" value="{{ item }}" name="item" placeholder="item 1;item 2;item 3..." id="item" class="form-control">
+                    <input type="submit" value="Створити новий список" name="submit" class="btn-sm btn-success mt-3">
+                    <input type="submit" value="Добавити елемент в початок" name="submit" class="btn-sm btn-success mt-3">
+                    <input type="submit" value="Добавити елемент в кінець" name="submit" class="btn-sm btn-success mt-3">
+                    <input type="submit" value="Видалити елемент" name="submit" class="btn-sm btn-success mt-3">
+                    <input type="submit" value="Кількість входжень елемента" name="submit" class="btn-sm btn-success mt-3">
+                    <br>
+                    <input type="text" class="form-control mt-3" name="list" value="{{ list }}" readonly>
+                </div>
+            </form>
+        </div>
+    </div>
+{% endblock %}

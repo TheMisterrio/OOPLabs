@@ -1,0 +1,29 @@
+{% extends 'index.html' %}
+{% block lab %}
+     <div class="card">
+        <div class="card-body">
+            <div class="card-title">Trapezoid</div>
+            <form action="" method="post">
+                <div class="form-group">
+                    <input type="text" placeholder="X1;Y1" value="{{ cors[0] }}" class="form-control-sm mb-2" id="cor1" name="cor1">
+                    <input type="text" placeholder="X2;Y2" value="{{ cors[1] }}" class="form-control-sm mb-2" id="cor2" name="cor2">
+                    <br>
+                    <input type="text" placeholder="X3;Y3" value="{{ cors[2] }}" class="form-control-sm" id="cor3" name="cor3">
+                    <input type="text" placeholder="X4;Y4" value="{{ cors[3] }}" class="form-control-sm" id="cor4" name="cor4">
+                    <br>
+                    <input type="submit" value="Calculate" class="btn-success mt-3">
+                    <br>
+                    {% if info is defined %}
+                        <div class="h5 mt-3 text-center">Інформація про трапецію:</div>
+                        <p>Ліва сторона: {{ info['sides'][0] }}</p>
+                        <p>Верхня сторона: {{ info['sides'][1] }}</p>
+                        <p>Права сторона: {{ info['sides'][2] }}</p>
+                        <p>Нижня сторона: {{ info['sides'][3] }}</p>
+                        <p>Периметр: {{ info['perimeter'] }}</p>
+                        <p>Площа: {{ info['square'] }}</p>
+                    {% endif %}
+                </div>
+            </form>
+        </div>
+    </div>
+{% endblock %}

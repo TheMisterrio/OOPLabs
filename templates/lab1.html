@@ -1,0 +1,69 @@
+{% extends 'index.html' %}
+{% block lab %}
+     <div class="card">
+        <div class="card-body">
+            <div class="card-title">Fractions</div>
+            <form action="" method="post">
+                <div class="form-group">
+                    <input type="text" value="{{ num1 }}" name="num1" id="num1" class="form-control-sm">
+                    <select class="custom-select-sm" name="operation" id="operation">
+                        {% if operation == '+' %}
+                            <option value="+">+</option>
+                            <option value="-">-</option>
+                            <option value="*">*</option>
+                            <option value="=">=</option>
+                            <option value=">">'>'</option>
+                            <option value="<">'<'</option>
+                        {% elif operation == '-' %}
+                            <option value="+">+</option>
+                            <option selected value="-">-</option>
+                            <option value="*">*</option>
+                            <option value="=">=</option>
+                            <option value=">">'>'</option>
+                            <option value="<">'<'</option>
+                        {%  elif operation == '*' %}
+                            <option value="+">+</option>
+                            <option value="-">-</option>
+                            <option selected value="*">*</option>
+                            <option value="=">=</option>
+                            <option value=">">'>'</option>
+                            <option value="<">'<'</option>
+                        {%  elif operation == '=' %}
+                            <option value="+">+</option>
+                            <option value="-">-</option>
+                            <option value="*">*</option>
+                            <option selected value="=">=</option>
+                            <option value=">">'>'</option>
+                            <option value="<">'<'</option>
+                        {%  elif operation == '>' %}
+                            <option value="+">+</option>
+                            <option value="-">-</option>
+                            <option value="*">*</option>
+                            <option value="=">=</option>
+                            <option selected value=">">'>'</option>
+                            <option value="<">'<'</option>
+                        {%  elif operation == '<' %}
+                            <option value="+">+</option>
+                            <option value="-">-</option>
+                            <option value="*">*</option>
+                            <option value="=">=</option>
+                            <option value=">">'>'</option>
+                            <option selected value="<">'<'</option>
+                        {%  else %}
+                            <option value="+">+</option>
+                            <option value="-">-</option>
+                            <option value="*">*</option>
+                            <option value="=">=</option>
+                            <option value=">">'>'</option>
+                            <option value="<">'<'</option>
+                        {% endif %}
+                    </select>
+                    <input type="text" value="{{ num2 }}" name="num2" id="num2" class="form-control-sm">
+                    <input type="submit" value="Calculate" class="btn-success mt-3">
+                    <br>
+                    <input type="text" class="form-control text-center mt-3" value="{{ result }}" readonly>
+                </div>
+            </form>
+        </div>
+    </div>
+{% endblock %}

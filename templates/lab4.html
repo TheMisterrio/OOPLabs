@@ -1,0 +1,32 @@
+{% extends 'index.html' %}
+{% block lab %}
+     <div class="card">
+        <div class="card-body">
+            <div class="card-title">String</div>
+            <form action="" method="post">
+                <div class="form-group">
+                    <label for="string">Рядок:</label>
+                    <input type="text" value="{{ string }}" name="string" id="string" placeholder="some string"  class="form-control-sm">
+                    <input type="submit" value="Довжина рядка" name="submit" class="ml-3 btn-sm btn-success mt-3">
+                    <br>
+                    <div class="card-title mt-3">Complex Number</div>
+                    <label for="num1_1">Дійсна частина:</label>
+                    <input type="number" value="{{ num1_1 }}" name="num1_1" placeholder="" id="num1_1" class="form-control-sm">
+                    <label for="num1_2">Уявна частина:</label>
+                    <input type="number" value="{{ num1_2 }}" name="num1_2" placeholder="" id="num1_2" class="form-control-sm">
+                    <br>
+                    <label for="num2_1">Дійсна частина:</label>
+                    <input type="number" value="{{ num2_1 }}" name="num2_1" placeholder="" id="num2_1" class="form-control-sm">
+                    <label for="num2_2">Уявна частина:</label>
+                    <input type="number" value="{{ num2_2 }}" name="num2_2" placeholder="" id="num2_2" class="form-control-sm">
+                    <br>
+                    <input type="submit" value="Додавання" name="submit" class="btn-sm btn-success mt-3">
+                    <input type="submit" value="Множення" name="submit" class="btn-sm btn-success mt-3">
+                    <input type="submit" value="Порівняння" name="submit" class="btn-sm btn-success mt-3">
+                    <br>
+                    <input type="text" class="form-control mt-3" name="list" value="{{ result }}" readonly>
+                </div>
+            </form>
+        </div>
+    </div>
+{% endblock %}
